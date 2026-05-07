@@ -1,5 +1,9 @@
-import { defindeConfig } from 'vite';
+/// <reference types="vitest/config" />
+import { defineConfig } from "vite";
 
-export default defindeConfig({
-    
+export default defineConfig({
+  test: {
+    environment: "jsdom",
+    include: ["src/**/*.test.js"],
+  },
 });
